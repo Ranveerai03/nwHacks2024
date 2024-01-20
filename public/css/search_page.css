@@ -1,0 +1,19 @@
+#navbar {
+    display: flex;
+
+    width: 100vw;
+    height: 5vh;
+
+    background-color: transparent;
+}
+
+#search-bar {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+
+    height: 5vh;
+    width: 80vw;
+
+    background-color: gray;
+}

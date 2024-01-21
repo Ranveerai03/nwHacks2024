@@ -1,4 +1,9 @@
-:root {}
+:root {
+
+    --clr-trans-black: hsla(0, 0, 0, 0.3);
+    --clr-trans-grey: hsla(0, 0%, 100%, 0.95);
+
+}
 
 * {
     margin: 0;
@@ -8,12 +13,33 @@
 
 body {
     background-color: darkgrey;
+    font-family: "Montserrat Alternates", sans-serif;
 }
 
 #landing {
-    background: url("../../public/media/coverImage.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Ensure the background covers the entire viewport height */
+    height: 100vh;
 }
+
+#title-text {
+    color: white;
+
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-size: 68pt;
+}
+
+#intro-text {
+    color: white;
+
+    font-family: "Montserrat Alternates", sans-serif;
+
+}
+
+#landingScroll {
+    background-color: #1B1B1B;
+    height: 140vh;
+    width: 100%;
+
+}
+
+

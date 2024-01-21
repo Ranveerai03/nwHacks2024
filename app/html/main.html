@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,23 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
 
 
     <!-- css files -->
+    <link rel="stylesheet" type="text/css" href="../../public/css/button.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/sticky.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/landing.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/cover.css">
+
+    <!-- import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@300&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
 
     <!-- STICKY NAVBAR BEGINS -->
@@ -35,13 +45,15 @@
                 <a id="programs" href="../html/search_page.html">programs</a>
 
 
-                <svg class="boxMenu" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" preserveAspectRatio="none" >
+                <svg class="boxMenu" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64"
+                    preserveAspectRatio="none">
                     <!-- Top-left square -->
-                    <rect id="topLeftBox" x="3" y="3" width="24" height="24" rx="6" ry="6" stroke="#DDD" stroke-width="4" fill="none" />
+                    <rect id="topLeftBox" x="3" y="3" width="24" height="24" rx="6" ry="6" stroke="#DDD"
+                        stroke-width="4" fill="none" />
 
                     <!-- Top-right square -->
-                    <rect id="topLeftBox" x="37" y="3" width="24" height="24" rx="6" ry="6" stroke="#DDD" stroke-width="4"
-                        fill="none" />
+                    <rect id="topLeftBox" x="37" y="3" width="24" height="24" rx="6" ry="6" stroke="#DDD"
+                        stroke-width="4" fill="none" />
 
                     <!-- Bottom-left square -->
                     <rect x="3" y="37" width="24" height="24" rx="6" ry="6" stroke="#DDD" stroke-width="4"
@@ -57,12 +69,102 @@
     </div>
     <!-- STICKY NAVBAR ENDS -->
 
+    <!-- LANDING IMAGE -->
+    <picture>
+        <source srcset="../../public/media/coverImage.tiff" type="image/tiff">
+        <img class="landingImage" src="../../public/media/coverImage.webp" alt="scholarly">
+    </picture>
+
     <!-- LANDING COVER BEGINS -->
     <div id="landing">
-        
+        <!-- LANDING PAGE CONTENT -->
+        <div id="landingContent">
+
+            <div id="title-section">
+                <h1 id="title-text"> scholarly </h1>
+            </div>
+
+            <div id="intro-section">
+                <p id="intro-text">
+                    educating the future
+                </p>
+            </div>
+
+            <!-- FIND PROGRAMS BUTTON -->
+            <div id="programsButton">
+
+                <a id="circularButton" href="https://forms.gle/gkz4UE41K9qv3tDd7" target="_blank">
+                    <span id="buttonText"> find programs </span>
+                    <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100"
+                        height="100" style="background-color: transparent; overflow: visible;">
+                        <defs>
+                            <linearGradient id="borderGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" style="stop-color: var(--clr-trans-grey)" />
+                                <stop offset="100%" style="stop-color: var(--clr-trans-grey)" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="50" fill="var(--clr-trans-black)" stroke="url(#borderGradient)"
+                            stroke-width="1.5" />
+                    </svg>
+
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="110" height="16" viewBox="0 0 116 16"
+                        fill="none">
+                        <path
+                            d="M115.707 8.70711C116.098 8.31658 116.098 7.68342 115.707 7.29289L109.343 0.928932C108.953 0.538408 108.319 0.538408 107.929 0.928932C107.538 1.31946 107.538 1.95262 107.929 2.34315L113.586 8L107.929 13.6569C107.538 14.0474 107.538 14.6805 107.929 15.0711C108.319 15.4616 108.953 15.4616 109.343 15.0711L115.707 8.70711ZM0 9H115V7H0V9Z"
+                            fill="var(--clr-trans-grey)" />
+                    </svg>
+                </a>
+
+            </div>
+
+            <div id="whyScholarly">
+                <div id="whyTitle">
+                    <p id="whyTitleP">
+                        why scholarly
+                    </p>
+                </div>
+                <div id="whyBody">
+                    <p id="whyBodyP"> 
+                        we empower aspiring and current 
+                        students to discover the perfect program 
+                        tailored to their aspirations, allowing them 
+                        to pursue their passion.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- LANDING PAGE ENDS -->
+
+    <!-- LANDING SCROLL BEGINS -->
+    <div id="landingScroll">
+
+
+    <!-- NEWS SECTION BEGINS -->
+    <div id="newsSection">
+        <p id="newsTitle">
+            news
+        </p>
+        <div id="newsCarosel">
+
+        </div>
+
+    </div>
+    <!-- NEWS SECTION ENDS -->
+
+
+    <!-- FOOTER SECTION BEGINS -->
+    <div id="footerSection">
+
+    </div>
+    <!-- FOOTER SECTION ENDS -->
+
+
+    </div>
+    <!-- LANDING SCROLL ENDS -->
 
     <script src="../../public/js/firebaseAPI_scholarly"></script>
 </body>
+
 </html>

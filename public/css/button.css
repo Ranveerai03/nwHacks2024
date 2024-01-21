@@ -1,0 +1,123 @@
+:root {
+    --clr-neon-pink: hsl(320, 100%, 50%);
+    --clr-neon-blue: hsl(195, 100%, 50%);
+
+    --clr-blue-glow: hsl(180, 100%, 50%);
+    --clr-pink-glow: hsl(317, 100%, 50%);
+
+    --clr-clear-blue: hsla(238, 100%, 50%, 0.125);
+    --clr-clear-pink: hsla(297, 100%, 50%, 0.125);
+
+    --clr-whiteBlue: hsl(240, 100%, 94%);
+
+    --clr-trans-black: hsla(0, 0, 0, 0.3);
+    --clr-trans-grey: hsla(0, 0%, 100%, 0.95);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+#circularButton {
+    z-index: 150;
+
+    animation: bobbingAnimation 8s infinite ease-in-out;
+
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    overflow: visible;
+
+
+    /* box-shadow: 14px 14px 27px #8a8a8a,
+    -14px -14px 27px #ffffff; */
+
+}
+
+#buttonText {
+    color: var(--clr-trans-grey);
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15pt;
+
+    position: absolute;
+    top: 18%;
+    /* Adjust the percentage based on your preference */
+    left: 84%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: visible;
+    z-index: 2;
+
+    transition: 300ms ease-in-out;
+    transition-delay: 0.2s;
+
+    filter: drop-shadow(10px 10px 20px #8a8a8a,
+            -10px -10px 20px #dddddd);
+}
+
+.arrow {
+    color: var(--clr-trans-grey);
+    position: absolute;
+    top: 43%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transform: scale(0.9);
+
+    transition: 300ms ease-out;
+
+    filter: drop-shadow(10px 10px 20px #8a8a8a,
+            -10px -10px 20px #dddddd);
+}
+
+.circle {
+    z-index: 0;
+    transform: scale(1.3);
+
+    opacity: 0.5;
+
+    border-radius: 50%;
+
+    background: var(--clr-trans-black);
+
+    transition: 300ms ease-out;
+}
+
+#circularButton:hover .circle {
+    transform: scale(1.4);
+    background: var(--clr-trans-black);
+
+    transition: 500ms ease-out;
+}
+
+
+#circularButton:hover .arrow {
+    left: 50%;
+    transition: 300ms ease-out;
+
+}
+
+#circularButton:hover #buttonText {
+    left: 90%;
+    transition: 300ms ease-out;
+    transition-delay: 0.2s;
+}
+
+@keyframes bobbingAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}

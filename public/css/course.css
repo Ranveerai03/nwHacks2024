@@ -23,7 +23,7 @@ section {
   display: flex;
   color: white;
 
-  border-radius: 1.5rem;
+  /* border-radius: 1.5rem; */
   border: 1px solid rgba(81, 81, 81, 0.85);
 
   background: rgba(10, 10, 10, 0.6);
@@ -58,16 +58,16 @@ input {
 
 .card {
     display: flex;
-    flex-direction: column;
 
-    width: 90%;
+
+    width: 101%;
     height: auto;
     padding: 2rem;
-    margin-left: 0;
+    gap: 2rem;
 
     color: white;
   
-    border-radius: 1.5rem;
+    /* border-radius: 1.5rem; */
     border: 1px solid rgba(81, 81, 81, 0.85);
   
     background: rgba(10, 10, 10, 0.6);
@@ -77,8 +77,8 @@ input {
 
 #card-template {
     display: flex;
-    padding: 2rem;
-
+    justify-content: center;
+    align-items: center;
 }
 
 .name {
@@ -119,9 +119,8 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
 
-    margin-left: -3.5rem;
 }
 
 #coursepage-courserating {
@@ -130,13 +129,8 @@ input {
     justify-content: center;
     align-items: center;
 
+    gap: 2rem;
 }
-
-/* #coursepage-rating {
-    padding: 1.5rem;
-    padding-top: 2rem;
-    line-height: 2rem;
-} */
 
 p.degree {
     font-weight: 500;
@@ -157,5 +151,6 @@ p.school {
 }
 
 p.stars {
-    padding-left: 2rem;
+    padding-left: 1.5rem;
+    padding-top: 4rem;
 }

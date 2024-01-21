@@ -48,6 +48,19 @@ function renderCard(element, elementDocId) {
     schoolName.parentElement.href = "../../app/html/course_page.html"
     schoolName.parentElement.addEventListener('click', e => addDocIdToSessionStr(elementDocId))
 
+    //Rewrite this part if have time, ugly code
+    const img = card.querySelector("img")
+    if (element.school === "British Columbia Institute of Technology") {
+        img.src = "../../public/media/bcitLogo.png"
+    } else if (element.school === "University of British Columbia") {
+        img.src = "../../public/media/ubcLogo.png"
+    } else if (element.school === "Simon Fraser University") {
+        img.src = "../../public/media/sfuLogo.png"
+    } else if (element.school === "Langara College") {
+        img.src = "../../public/media/langaraLogo.png"
+    } else if (element.school === "Kwantlen Polytechnic University") {
+        img.src = "../../public/media/kpuLogo.png"
+    }
 
     cardsContainer.appendChild(card)
 }

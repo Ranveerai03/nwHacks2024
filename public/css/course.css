@@ -12,3 +12,62 @@
 body {
     background-color: #1B1B1B;
 }
+
+section {
+    margin: 4rem;
+}
+
+#course-details {
+    width: 90%;
+
+    display: flex;
+    color: white;
+
+    border-radius: 1.5rem;
+    border: 1px solid rgba(81, 81, 81, 0.85);
+
+    background: rgba(10, 10, 10, 0.6);
+
+    backdrop-filter: blur(5px);
+
+    padding: 2rem;
+}
+
+#reviews {
+    width: 90%;
+
+    display: flex;
+    color: white;
+
+    border-radius: 1.5rem;
+    border: 1px solid rgba(81, 81, 81, 0.85);
+
+    background: rgba(10, 10, 10, 0.6);
+
+    backdrop-filter: blur(5px);
+
+    padding: 2rem;
+}
+
+#searchArea {
+    cursor: none;
+}
+
+#goBackButton {
+    transform: scale(0.5);
+    margin-left: -4rem;
+    padding: 0;
+}
+
+.chevron {
+    transform: translate(-0.3rem, 0.2rem);
+}
+
+input {
+    padding: 0;
+}
+
+#reviewButton {
+    transform: scale(0.8);
+    margin-right: 2rem;
+}

@@ -60,10 +60,59 @@
   </div>
   <!-- STICKY NAVBAR ENDS -->
 
+  <!-- SEARCH BAR BEGINS -->
+  <div id="searchArea">
+    <label for="searchInput">
+      <div id="goBackButton">
+        <a id="circularButton" href="../html/search_page.html">
+          <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"
+            style="background-color: transparent; overflow: visible;">
+            <circle cx="50" cy="50" r="50" fill="var(--clr-trans-black)" stroke="white" stroke-width="1.5" />
+            <path class="chevron" d="M58.5746 33.9552L44.9925 45.5L58.5746 57.0448" stroke="white" stroke-opacity="0.8"
+              stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </label>
+    <input id="search" type="text" placeholder="back" readonly>
+  </div>
+
+
+
+  <!-- SEARCH BAR ENDS -->
+
+  <br>
+  <br>
+
 
   <!--  -->
   <section id="course-details">
     <div id="courseCardGroup"></div>
+
+    <div id="reviewButton">
+
+      <a id="circularButton" href="../html/review.html">
+        <span id="buttonText"> leave review </span>
+        <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"
+          style="background-color: transparent; overflow: visible;">
+          <defs>
+            <linearGradient id="borderGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" style="stop-color: var(--clr-trans-grey)" />
+              <stop offset="100%" style="stop-color: var(--clr-trans-grey)" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="50" fill="var(--clr-trans-black)" stroke="url(#borderGradient)"
+            stroke-width="1.5" />
+        </svg>
+
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="110" height="16" viewBox="0 0 116 16" fill="none">
+          <path
+            d="M115.707 8.70711C116.098 8.31658 116.098 7.68342 115.707 7.29289L109.343 0.928932C108.953 0.538408 108.319 0.538408 107.929 0.928932C107.538 1.31946 107.538 1.95262 107.929 2.34315L113.586 8L107.929 13.6569C107.538 14.0474 107.538 14.6805 107.929 15.0711C108.319 15.4616 108.953 15.4616 109.343 15.0711L115.707 8.70711ZM0 9H115V7H0V9Z"
+            fill="var(--clr-trans-grey)" />
+        </svg>
+      </a>
+
+    </div>
   </section>
 
 

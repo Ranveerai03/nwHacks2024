@@ -1,0 +1,756 @@
+:root {
+    --clr-bg: hsla(0, 0%, 7%);
+    --clr-bg-transparent: hsla(0, 0%, 7%, 0.4);
+    --clr-white: hsl(0, 0%, 95%);
+    --clr-borders: hsl(0, 0%, 24%);
+    --clr-opache-bg: hsla(0, 0%, 26%, 0.1);
+    --clr-opache-bg-fullscreen: hsla(0, 0%, 12%, 0.7);
+    --clr-less-opache-bg: hsla(0, 0%, 13%, 0.909);
+    --clr-clear: hsla(0, 0%, 0%, 0);
+
+    --clr-prime: hsl(240 80% 20%);
+    --clr-secondary: #6c66c6;
+    --clr-accent: hsl(320 100% 50%);
+
+
+    --clr-vibrantlav: hsl(260 70% 60%);
+    --clr-vibrantpurp: hsl(260, 66%, 52%);
+    --clr-royalpurp: hsl(270 50% 30%);
+
+    --clr-neonblu: hsl(190 100% 50%);
+    --clr-neonpeach: hsl(40 100% 50%);
+
+    --clr-glass: hsla(0, 0%, 100%, 0.1);
+    --clr-brightglass: hsla(0, 0%, 5%, 0.05);
+    --clr-darkglass: hsla(0, 0%, 5%, 0.01);
+
+    --clr-persianblu: hsl(235, 100%, 55%);
+    --clr-darkblu: #090c9b;
+    --clr-violet: hsl(240, 100%, 65%);
+
+    /* For background mist orbs */
+    --clr-neon-blue: hsl(200, 100%, 50%);
+    --clr-neon-pink: hsl(280, 100%, 50%);
+
+    /* Glow Colours */
+    --clr-blue-glow: hsl(180, 100%, 50%);
+    --clr-pink-glow: hsl(317, 100%, 50%);
+
+    /* Card Colours*/
+    --clr-cards: hsla(0, 0%, 90%, 0.15);
+    --clr-card-content: hsla(0, 0%, 2%, 0.1);
+
+    /* Nav Colours */
+    --clr-black-transparent: hsla(0, 0%, 0%, 0.7);
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-off-white: hsla(0, 10%, 90%, 0.90);
+    --clr-off-white-font: hsla(0, 10%, 90%, 0.60);
+    --clr-nav-bg: #000211;
+
+        /* Button Colours*/
+        --clr-button: hsla(0, 0%, 95%, 0.3);
+
+        --clr-registration-glass: #ffffff1a;
+        --clr-registration-border: #ffffff30;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+body {
+    align-items: center;
+    background-color: var(--clr-bg);
+    display: flex;
+    min-height: 100vh;
+    max-height: 100vh;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    background-image: url("../images/BG Group.png");
+    background-size: 110vw 110vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.searchBar:hover,
+.card:hover::before,
+.card.active::before,
+.card:hover>.card>.card-border,
+.centerButton.active~.menu {
+    will-change: transform,
+        opacity,
+        filter,
+        background,
+        blur,
+        saturate,
+        transition;
+}
+
+
+
+/* BACKGROUND NEON */
+#top-dot {
+    position: absolute;
+    z-index: 1;
+    top: -10%;
+    left: -7.5vw;
+    width: 209px;
+    height: 199px;
+    background-color: rgba(0, 6, 61, 0.40);
+    filter: blur(100px);
+}
+
+#middle-dot {
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    right: -10vw;
+    width: 209px;
+    height: 199px;
+    background-color: rgba(80, 0, 82, 0.40);
+    filter: blur(100px);
+    border-radius: 50%;
+}
+
+#bottom-dot {
+    position: absolute;
+    z-index: 1;
+    bottom: -15%;
+    left: 5%;
+    width: 209px;
+    height: 199px;
+    background-color: rgba(0, 12, 119, 0.5);
+    filter: blur(100px);
+}
+
+
+*::placeholder {
+    color: var(--clr-off-white-font);
+    font-size: 14px;
+}
+
+
+
+/* SEARCH BAR */
+.searchContainer {
+    position: absolute;
+    top: 37%;
+    left: 0;
+    width: 100%;
+    /* Make it full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    /* padding: 1rem; */
+}
+
+.searchBar {
+    left: 50%;
+    width: 100%;
+    max-width: 40vw;
+    min-width: 200px;
+    height: 30px;
+    color: var(--clr-white);
+    background: var(--clr-opache-bg-fullscreen);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: .5rem;
+    margin-top: 2rem;
+    z-index: 9000;
+
+    border: var(--clr-search-border);
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    backdrop-filter: blur(10px) saturate(2);
+    transition: 1s ease-in-out;
+}
+
+.searchBar:hover {
+    background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+            /* provide fallback values */
+            rgba(255, 255, 255, 0.4),
+            transparent 40%);
+    transition: 1s;
+
+    cursor: pointer;
+}
+
+.searchBar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 2px;
+    font-size: 8;
+    color: var(--clr-off-white);
+
+    z-index: 9000;
+
+    cursor: pointer;
+}
+
+.searchBar button {
+    display: flex;
+    font-size: 1rem;
+    padding: 1rem;
+    color: var(--clr-off-white);
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 500ms;
+
+    z-index: 9000
+}
+
+.searchBar button:hover {
+    color: var(--clr-neonblu);
+    transform: scale(1.2);
+    transition: 500ms;
+}
+
+/* Start Charge Button */
+.chargeContainer {
+    position: absolute;
+    top: 74%;
+    left: 0;
+    width: 100%;
+    /* Make it full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    /* padding: 1rem; */
+    cursor: pointer;
+}
+
+.chargeBar:hover {
+    background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+            /* provide fallback values */
+            rgba(255, 255, 255, 0.4),
+            transparent 40%);
+    transition: 1s;
+}
+
+.chargeBar {
+    left: 50%;
+    width: 100%;
+    max-width: 40vw;
+    min-width: 200px;
+    height: 30px;
+    color: var(--clr-white);
+    background: var(--clr-opache-bg-fullscreen);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: .5rem;
+    margin-top: 2rem;
+
+
+    border: var(--clr-search-border);
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    backdrop-filter: blur(10px) saturate(2);
+
+    transition: 1s ease-in-out;
+}
+
+.chargeBar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 2px;
+    font-size: 8;
+    color: var(--clr-off-white);
+
+    cursor: pointer;
+}
+
+.chargeBar button {
+    display: flex;
+    font-size: 1rem;
+    padding: 1rem;
+    color: var(--clr-off-white);
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 500ms;
+}
+
+.chargeBar button:hover {
+    color: var(--clr-neonblu);
+    transform: scale(1.2);
+    transition: 500ms;
+
+
+}
+
+
+/* HAMBURGER ICON */
+
+/* At Full Screen Size */
+@media (min-width: 1030px) {
+    .main-menu {
+        display: hidden;
+    }
+}
+
+/* At Mobile Screen Size */
+@media (max-width: 1029px) {
+    .main-menu button {
+        position: fixed;
+        top: 5%;
+        right: 15%;
+        transform: translateX(50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        z-index: 9999;
+        border: none;
+        border-radius: 0.3rem;
+        width: 45px;
+        height: 45px;
+        box-shadow: inset 0 0 0 5rem var(--clr-black-transparent), 0 0 35px var(--clr-pink-glow), 0 0 15px var(--clr-blue-glow);
+    }
+
+    .hamburgerButton {
+        overflow: hidden;
+    }
+
+    .hamburgerButton .hamburger {
+        transition: translate 1s;
+    }
+
+    .hamburgerButton:hover .hamburger {
+        translate: -0.4px -3.5px;
+        transition: 1s;
+    }
+
+    .hamburgerButton:hover .line {
+        stroke-dasharray: 60 105 60 400;
+        cursor: pointer;
+        stroke-dashoffset: -90;
+        transition: 1s;
+    }
+
+    .hamburgerButton.active .hamburger {
+        rotate: .125turn;
+        transition: 1s;
+    }
+
+    .hamburgerButton.active:hover .hamburger {
+        translate: 2.5px -2.1px;
+        transition: 1s;
+    }
+
+    .hamburgerButton .line {
+        transition: 1s;
+        stroke-dasharray: 60 31 60 400;
+        transition: 1s;
+    }
+
+}
+
+
+
+
+/* PRIMARY HEADER */
+
+/* Logo (Currently Empty) */
+.logo {
+    margin: 2rem;
+    float: left;
+}
+
+/* Nav Area */
+.primary-header {
+    align-content: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 1em;
+    right: 2rem;
+    font-size: medium;
+    color: var(--clr-off-white);
+    z-index: 9001;
+}
+
+/* Primary Navigation and Drop Menu */
+
+/* Nav Bar */
+.primary-navigation {
+    list-style: none;
+    padding: 1em;
+    margin: 0;
+
+
+    background: var(--clr-less-opache-bg);
+
+}
+
+/* If browser supports effects . . . */
+@supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+
+        background: var(--clr-opache-bg-fullscreen);
+        backdrop-filter: blur(1rem);
+    }
+}
+
+/* Nav Links */
+.primary-navigation a {
+    text-decoration: none;
+    color: var(--clr-off-white);
+
+}
+
+.main-menu {
+    display: none;
+}
+
+/* Styles for Mobile Screen Size */
+@media (max-width: 1029px) {
+    .primary-header {
+        font-size: x-large;
+    }
+
+    .primary-navigation {
+        gap: 2rem;
+
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(20vh, 5rem) 2em;
+
+
+        border: 1px solid var(--clr-borders);
+
+        transform: translateX(100%);
+        transition: 500ms;
+
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+        transition: 500ms;
+    }
+
+    .searchContainer {
+        z-index: 1;
+    }
+
+    .card {
+        z-index: 1;
+    }
+
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navigation {
+
+            background: var(--clr-opache-bg);
+            backdrop-filter: blur(1rem);
+        }
+    }
+
+    .main-menu {
+        display: block;
+    }
+}
+
+
+
+
+/* CARDS */
+
+#cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: -1rem;
+}
+
+#cards:hover>.card>.card-border {
+    opacity: 1;
+}
+
+.card {
+    left: 0;
+
+    background-color: var(--clr-registration-glass);
+    border-radius: 2rem;
+    cursor: pointer;
+
+    height: 35vh;
+    position: relative;
+    width: 60vw;
+    min-width: 350px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 431px) {
+    .card {
+        left: 6.5%;
+    }
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card.active::before {
+    opacity: 1;
+}
+
+.card::before,
+.card>.card-border {
+    background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+            /* provide fallback values */
+            rgba(255, 255, 255, 0.4),
+            transparent 40%);
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+    z-index: 2;
+}
+
+.card::before {
+    background: radial-gradient(700px circle at var(--mouse-x) var(--mouse-y),
+            /* provide fallback values */
+            rgba(255, 255, 255, 0.15),
+            transparent 40%);
+    z-index: 3;
+}
+
+.card>.card-border {
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y),
+            /* provide fallback values */
+            rgba(255, 255, 255, 0.03),
+            transparent 40%);
+    z-index: 1;
+}
+
+.card>.card-content1 {
+    background-color: var(--clr-card-content);
+    border-radius: inherit;
+    height: calc(100% - 2px);
+    margin: 1px;
+    position: relative;
+    width: calc(100% - 2px);
+    z-index: 2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.card>.card-content2 {
+    background-color: var(--clr-card-content);
+    border-radius: inherit;
+    height: calc(100% - 2px);
+    margin: 1px;
+    position: relative;
+    width: calc(100% - 2px);
+    z-index: 2;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.card-content1 {
+    background-image: url(../images/MapCover.png);
+    background-size: cover;
+    filter: brightness(90%) blur(1px);
+}
+
+.card-content1:hover {
+    filter: brightness(90%) blur(0px);
+}
+
+.card-content2 {
+    background-image: url(../images/ChargingCover.png);
+    background-size: cover;
+    filter: brightness(90%) blur(1px);
+}
+
+.card-content2:hover {
+    filter: brightness(90%) blur(0px);
+}
+
+
+/* BOTTOM NAV BAR */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, var(--clr-bg-transparent), var(--clr-clear));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    z-index: 9999;
+}
+
+.bottom-nav a {
+    color: var(--clr-white);
+    text-decoration: none;
+}
+
+.centerButton {
+    position: relative;
+    width: 5.75rem;
+    height: 5.75rem;
+    border-radius: 30%;
+    top: 20%;
+    transition: 500ms;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transform: translateY(-1.75rem);
+    box-shadow: inset 0 0 0 5rem var(--clr-black-transparent),
+        0 0 50px var(--clr-pink-glow),
+        0 0 35px var(--clr-blue-glow);
+    backdrop-filter: blur(2px) saturate(5);
+
+}
+
+.centerButton::before {
+    content: "+";
+    font-family: "condor", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--clr-off-white);
+    font-size: 7.5em;
+    position: absolute;
+    transform: translate(0%, 4.5%);
+    /* Center the image precisely */
+    transition: 500ms;
+    left: 15%;
+    top: -30%;
+
+}
+
+.centerButton.active {
+    top: 5%;
+    transition: 500ms;
+}
+
+.centerButton.active:before {
+    transform: rotate(225deg);
+    left: 20%;
+    top: -34%;
+    transition: 500ms;
+}
+
+.menu {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background: var(--clr-clear);
+    border: 2px solid var(--clr-clear);
+    border-radius: 30%;
+    transform: translateY(-2rem);
+    transition: 300ms;
+    /* transition: transform 300ms, width 300ms, height 300ms; */
+    transition-delay: 100ms, 300ms, 300ms;
+}
+
+.centerButton.active~.menu {
+    width: 120vw;
+    height: 17.5vh;
+    background: var(--clr-glass);
+    border: 2px solid var(--clr-borders);
+    border-radius: 0%;
+    transform: translateY(2rem);
+    transition: 300ms;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15) inset,
+        0px 4px 4px 0px rgba(0, 0, 0, 0.15) inset;
+    backdrop-filter: blur(15px) saturate(1);
+}
+
+.menu ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+    line-height: 8rem;
+    transition: 500ms;
+}
+
+.centerButton.active~.menu ul {
+    gap: 3rem;
+    transition: 500ms;
+}
+
+.menu ul li {
+    list-style: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+    transition: 300ms;
+}
+
+.centerButton.active~.menu ul li {
+    opacity: 1;
+    visibility: visible;
+    transition: 500ms;
+}
+
+.menu ul li a {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--clr-white);
+    text-decoration: none;
+    transition: 500ms;
+    transform: translateY(-1.25rem);
+}
+
+
+.menu ul li a:hover {
+    transform: translateY(-1.5rem) scale(1.15);
+    color: var(--clr-neonblu);
+    transition: 500ms;
+}

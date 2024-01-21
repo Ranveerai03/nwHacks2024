@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Flow | Login</title>
+    <meta name="comp1800 template" content="My 1800 App">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Library CSS CDN go here -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <!-- Boostrap Library JS CDN  go here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Other libraries go here -->
+    <!-- Settings icon-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+
+    <!-- Link to styles of your own -->
+    <link rel="stylesheet" href="../../public/css/registration.css">
+    <!-- <script src="./scripts/firebaseAPI_TEAM99.js"></script> -->
+
+
+
+</head>
+
+<body>
+
+    <!-- <div class="round-1"></div>
+    <div class="round-2"></div> -->
+
+
+
+
+    <div class="hero">
+
+        <div class="form-box">
+            <div class="button-box">
+                <div class="profile-img" src="#" alt=""></div>
+                <div id="btn"></div>
+                <button type="button" class="toggle-button1" onclick="login()">Log In</button>
+                <button type="button" class="toggle-button2" onclick="register()">Register</button>
+            </div>
+            <!-- <div class="social-icons">
+                <img src="#">
+                <img src="#">
+                <img src="#">
+            </div> -->
+            <form id="login personalInfoFields" class="input-group" >
+                <input type="email" class="input-field" id="email_login" placeholder="Email" required>
+                <!-- <input type="email" class="input-field" placeholder="Email" required> -->
+                <input type="password" class="input-field" id="password_login" placeholder="Enter Password" required>
+                <div class="check">
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                </div>
+                <button type="submit" class="submit-btn" id="login">Login</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="email" class="input-field" id="email_sign" placeholder="Email" required>
+                <input type="text" class="input-field" id="username" placeholder="Username" required>
+                <input type="password" class="input-field" id="password_sign" placeholder="Create Password" required>
+                <input type="text" id="cityInput" class="input-field" placeholder="Enter City" required>
+                <div id="carModel">
+                    <label for="inputType-carInput" class="input-field2">Select Education Level:</label>
+                    <select id="inputType-carInput">
+                        <option value="" disabled selected>Levels</option>
+                        <option value="modelY" onclick="updateCarModel('Tesla Model Y')">High School</option>
+                        <option value="machE" onclick="updateCarModel('Mustang Mach-E')">University</option>
+                        <option value="KiaEV" onclick="updateCarModel('Kia EV6')">Non-Student</option>
+                    </select>
+                </div>
+                <div class="check">
+                    <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                </div>
+                <button type="submit" class="submit-btn" id="registration">Register</button>
+             
+                
+
+            </form>
+
+        </div>
+
+        <script src="../../public/js/login.js"></script>
+        <script src="../../public/js/login.js"></script>
+
+        <!---------------------------------------------->
+        
+        <script src="../../public/js/authentication.js"></script> 
+        <script src="../../public/js/firebaseAPI_scholarly"></script> </body>
+
+</html>

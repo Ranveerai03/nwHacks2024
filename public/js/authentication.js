@@ -24,12 +24,7 @@ var uiConfig = {
             //write to firestore. We are using the UID for the ID in users collection
             name: user.displayName, //"users" collection
             email: user.email, //with authenticated user's ID (user.uid)
-            country: "Canada", //optional default profile info
-            school: "BCIT",
-            profileImageUrl: "", // Placeholder for profile image URL
-            mainLocation: "ywwzV8QsjT5rbQYyadp7", 
-            weatherLocation: "Vancouver", 
-            bookmarks: [], // Bookmarks for saved locations
+            city: user.city, //optional default profile info,L
           })
           .then(function () {
             window.location.assign("main.html"); //re-direct to main.html after signup

@@ -69,11 +69,17 @@ function submitRating() {
                 numreviews: currentReviews,
                 totalRating: newRating
             })
+        }).then((doc) => {
+            redirect();
         })
 }
 
 function calculateAverage() {
     return (parseFloat(document.getElementById("workload").value) + parseFloat(document.getElementById("overall").value) + parseFloat(document.getElementById("difficulty").value)) / 3;
+}
+
+function redirect() {
+    window.location.assign("course_page.html");
 }
 
 fillCourseName();

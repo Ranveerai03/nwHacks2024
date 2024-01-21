@@ -43,6 +43,7 @@ function submitRating() {
     if (document.getElementById("anonymous").checked) {
         /* Does not save the name. */
         var anonData = {
+            user: "Anonymous",
             id: localStorage.getItem("currentUid"),
             review: document.getElementById("review").value,
             stars: average,

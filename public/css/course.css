@@ -75,6 +75,7 @@ input {
 }
 
 .card {
+<<<<<<< HEAD
   width: 99%;
   height: 258px;
   flex-shrink: 0;
@@ -138,3 +139,11 @@ input {
   font-weight: 400;
   line-height: normal;
 }
+=======
+    margin-bottom: 1rem;
+}
+
+#coursepage-courserating {
+    margin-right: 1em;
+}
+>>>>>>> b7a78dda78349240e30765569542d4538d54a429

@@ -18,7 +18,11 @@
     <link rel="stylesheet" type="text/css" href="../../public/css/button.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/sticky.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/landing.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../public/css/carousel.css"> -->
     <link rel="stylesheet" type="text/css" href="../../public/css/cover.css">
+
+    <!-- news carousel css -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- import font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,7 +98,7 @@
             <!-- FIND PROGRAMS BUTTON -->
             <div id="programsButton">
 
-                <a id="circularButton" href="https://forms.gle/gkz4UE41K9qv3tDd7" target="_blank">
+                <a id="circularButton" href="">
                     <span id="buttonText"> find programs </span>
                     <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100"
                         height="100" style="background-color: transparent; overflow: visible;">
@@ -151,73 +155,247 @@
                 <line x1="0" y1="0" x2="800" y2="0" stroke="var(--clr-trans-grey)" stroke-width="1" />
             </svg>
 
-            <div id="newsCarosel">
-
-            </div>
-
-            <svg class="grey-line" width="800" height="1" xmlns="http://www.w3.org/2000/svg">
-                <line x1="0" y1="0" x2="800" y2="0" stroke="var(--clr-trans-grey)" stroke-width="1" />
-            </svg>
+            <section id="newsCarosel">
+                <div class="swiper mySwiper container">
+                    <div class="swiper-wrapper content">
 
 
+                        <!-- FIRST CARD BEGINS -->
+                        <!-- <div class="swiper-slide card">
+                            <div class="card-content">
+                                <div class="image">
+                                    <img src="../../public/media/forbesImage.webp" alt="forbes">
+                                </div>
+
+                                <div class="carouselFooter">
+                                    <div class="description">
+                                        <p>
+                                            forbes: tech services forecast for 2024
+                                        </p>
+                                    </div>
+                                    <div class="link">
+
+                                        <a href="" target="_blank"></a>
+                                        <div class="linkButton">
+
+                                            <a id="circularButton"
+                                                href="https://www.forbes.com/sites/peterbendorsamuel/2023/11/28/tech-services-forecast-for-2024/?sh=70bb09b21977"
+                                                target="_blank">
+                                                <svg class="circle" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 100 100" width="100" height="100"
+                                                    style="background-color: transparent; overflow: visible;">
+                                                    <defs>
+                                                        <linearGradient id="borderGradient" x1="0%" y1="100%" x2="0%"
+                                                            y2="0%">
+                                                            <stop offset="0%"
+                                                                style="stop-color: var(--clr-trans-grey)" />
+                                                            <stop offset="100%"
+                                                                style="stop-color: var(--clr-trans-grey)" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <circle cx="50" cy="50" r="50" fill="var(--clr-trans-black)"
+                                                        stroke="url(#borderGradient)" stroke-width="1.5" />
+                                                    <path class="chevron"
+                                                        d="M41.4254 33.9552L55.0075 45.5L41.4254 57.0448" stroke="white"
+                                                        stroke-opacity="0.8" stroke-width="4" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- FIRST CARD ENDS -->
+
+
+                        <!-- SECOND CARD BEGINS -->
+                        <!-- <div class="swiper-slide card">
+                            <div class="card-content">
+                                <div class="image">
+                                    <img src="../../public/media/wefImage.jpg" alt="forbes">
+                                </div>
+
+                                <div class="carouselFooter">
+                                    <div class="description">
+                                        <p>
+                                            reuters: what we learned from the WEF in 2024
+                                        </p>
+                                    </div>
+                                    <div class="link">
+
+                                        <a href="" target="_blank">
+                                            <div class="linkButton">
+
+                                                <a id="circularButton"
+                                                    href="https://www.reuters.com/world/heard-davos-what-we-learned-wef-2024-2024-01-19/"
+                                                    target="_blank">
+                                                    <svg class="circle" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 100 100" width="100" height="100"
+                                                        style="background-color: transparent; overflow: visible;">
+                                                        <defs>
+                                                            <linearGradient id="borderGradient" x1="0%" y1="100%"
+                                                                x2="0%" y2="0%">
+                                                                <stop offset="0%"
+                                                                    style="stop-color: var(--clr-trans-grey)" />
+                                                                <stop offset="100%"
+                                                                    style="stop-color: var(--clr-trans-grey)" />
+                                                            </linearGradient>
+                                                        </defs>
+                                                        <circle cx="50" cy="50" r="50" fill="var(--clr-trans-black)"
+                                                            stroke="url(#borderGradient)" stroke-width="1.5" />
+                                                        <path class="chevron"
+                                                            d="M41.4254 33.9552L55.0075 45.5L41.4254 57.0448"
+                                                            stroke="white" stroke-opacity="0.8" stroke-width="4"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- SECOND CARD ENDS -->
+
+                        <!-- THIRD CARD BEGINS -->
+                        <!-- <div class="swiper-slide card">
+                            <div class="card-content">
+                                <div class="image">
+                                    <img src="../../public/media/nasaImage.webp" alt="forbes">
+                                </div>
+
+                                <div class="carouselFooter">
+                                    <div class="description">
+                                        <p>
+                                            nasa: NASA continues Artemis Moon Rocket...
+                                        </p>
+                                    </div>
+                                    <div class="link">
+
+                                        <a href="" target="_blank">
+                                            <div class="linkButton">
+
+                                                <a id="circularButton"
+                                                    href="https://www.nasa.gov/news-release/nasa-continues-artemis-moon-rocket-engine-tests-with-1st-hot-fire-of-2024/"
+                                                    target="_blank">
+                                                    <svg class="circle" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 100 100" width="100" height="100"
+                                                        style="background-color: transparent; overflow: visible;">
+                                                        <defs>
+                                                            <linearGradient id="borderGradient" x1="0%" y1="100%"
+                                                                x2="0%" y2="0%">
+                                                                <stop offset="0%"
+                                                                    style="stop-color: var(--clr-trans-grey)" />
+                                                                <stop offset="100%"
+                                                                    style="stop-color: var(--clr-trans-grey)" />
+                                                            </linearGradient>
+                                                        </defs>
+                                                        <circle cx="50" cy="50" r="50" fill="var(--clr-trans-black)"
+                                                            stroke="url(#borderGradient)" stroke-width="1.5" />
+                                                        <path class="chevron"
+                                                            d="M41.4254 33.9552L55.0075 45.5L41.4254 57.0448"
+                                                            stroke="white" stroke-opacity="0.8" stroke-width="4"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- THIRD CARD ENDS -->
+
+                    </div>
+                </div>
+                <svg class="grey-line" width="800" height="1" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="0" x2="800" y2="0" stroke="var(--clr-trans-grey)" stroke-width="1" />
+                </svg>
+
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination-bullet"></div> -->
+            </section>
         </div>
+
+
+
         <!-- NEWS SECTION ENDS -->
 
 
         <!-- FOOTER SECTION BEGINS -->
-        <div id="footerSection">
-            <div id="footerText">
-                <p id=footerTextP">
-                    <span>unlock your potential – everyone has a gift</span>
-                    <br>
-                    <br>
-                <p id="p1">
-                    At <span>scholarly</span>, we empower you to pursue your passion. Navigating the complex landscape
-                    of
-                    post-secondary programs can be daunting, but with us, the journey becomes seamless.
-                </p>
-                <p id="p2">
-                    As a collective of students, we understand the challenges of sifting through post-secondary options.
-                    Let us alleviate the stress for you.
-                </p>
-                <p id="p3">
-                    Enter the world of the scholarly database – a one-stop solution where you can simply explore your
-                    field of interest and discover the perfect program aligning with your goals.
-                </p>
-                <p id="p4">
-                    Your future, simplified and tailored just for you
-                </p>
-                </p>
-            </div>
-
-            <div id="footerImg">
-                <picture>
-                    <source srcset="../../public/media/studentsImage.webp" type="image/webp">
-                    <img class="footerImg" src="../../public/media/studentsImage.webp" alt="scholarly">
-                </picture>
-            </div>
-
-        </div>
+        <div class="footer-column">
+            <div id="footerRow">
+                <div id="footerSection">
+                    <div id="footerText">
+                        <p id="footerTextP">
+                        <p id="footerTitle">
+                            <span>unlock your potential – everyone has a gift</span>
+                        </p>
+                        <br>
+                        <br>
+                        <p id="p1">
+                            At <span>scholarly</span>, we empower you to pursue your passion. Navigating the complex
+                            landscape
+                            of
+                            post-secondary programs can be daunting, but with us, the journey becomes seamless.
+                        </p>
+                        <p id="p2">
+                            As a collective of students, we understand the challenges of sifting through post-secondary
+                            options.
+                            Let us alleviate the stress for you.
+                        </p>
+                        <p id="p3">
+                            Enter the world of the scholarly database – a one-stop solution where you can simply explore
+                            your
+                            field of interest and discover the perfect program aligning with your goals.
+                        </p>
+                        <p id="p4">
+                            Your future, simplified and tailored just for you
+                        </p>
+                        </p>
+                    </div>
 
 
-        <footer>
-            <a id="topBtn" href="../html/main.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="19" viewBox="0 0 29 19" fill="none">
-                    <path d="M2 17L14.5 2L27 17" stroke="#EDEDED" stroke-opacity="0.8" stroke-width="4"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <div id="toTopBtn">
-                    <p>back to top</p>
+                    <div id="footerImg">
+                        <picture>
+                            <source srcset="../../public/media/studentsImage.webp" type="image/webp">
+                            <img class="footerImg" src="../../public/media/studentsImage.webp" alt="scholarly">
+                        </picture>
+                    </div>
                 </div>
-            </a>
-        </footer>
-        <!-- FOOTER SECTION ENDS -->
 
 
+
+
+                <footer>
+                    <a id="topBtn" href="../html/main.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="19" viewBox="0 0 29 19" fill="none">
+                            <path d="M2 17L14.5 2L27 17" stroke="#EDEDED" stroke-opacity="0.8" stroke-width="4"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <div id="toTopBtn">
+                            <p>back to top</p>
+                        </div>
+                    </a>
+                </footer>
+                <!-- FOOTER SECTION ENDS -->
+
+
+            </div>
+        </div>
     </div>
     <!-- LANDING SCROLL ENDS -->
 
+    <!-- JAVASCRIPT LINKS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../../public/js/carousel.js/"></script>
     <script src="../../public/js/firebaseAPI_scholarly"></script>
 </body>
 

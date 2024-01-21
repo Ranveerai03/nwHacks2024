@@ -1,8 +1,6 @@
 :root {
-
     --clr-trans-black: hsla(0, 0, 0, 0.3);
     --clr-trans-grey: hsla(0, 0%, 100%, 0.95);
-
 }
 
 * {
@@ -22,7 +20,6 @@ body {
 
 #title-text {
     color: white;
-
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
     font-size: 68pt;
@@ -30,34 +27,44 @@ body {
 
 #intro-text {
     color: white;
-
     font-family: "Montserrat Alternates", sans-serif;
-
 }
 
 #landingScroll {
     position: relative;
-    background-color: #1B1B1B;
     height: 140vh;
     width: 100%;
+    overflow: hidden;
+}
 
+#landingScroll::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1B1B1B;
+    z-index: -1;
 }
 
 #newsSection {
     padding-top: 2rem;
     padding-left: 6rem;
+    position: relative;
+    z-index: 100;
 }
-
 
 #newsTitle {
     font-size: 26pt;
     font-weight: 500;
-
     padding-top: 6rem;
     padding-left: 2rem;
 }
 
 #footerSection {
+    z-index: 10;
+    bottom: -100%;
     padding-top: 4rem;
     display: flex;
 }
@@ -76,37 +83,34 @@ span {
     font-weight: 500;
 }
 
-
-
-#p1, 
+#p1,
 #p2,
 #p3,
 #p4 {
     padding-bottom: 0.5rem;
 }
 
-.footerImg {
-    width: 30vw;
+footer{
+    margin-top: 12.5rem;
 
-    margin-left: 10rem;
 }
 
-footer {
-    position: absolute;
-
-    bottom: 0;
-    left: 0;
+.footerImg {
+    width: 30vw;
+    margin-left: 9rem;
 }
 
 #topBtn {
+    
     display: flex;
 
     padding-left: 2rem;
-    padding-bottom: 2rem;
+    bottom: 0;
     gap: 0.75rem;
 
     text-decoration: none;
     color: white;
+    white-space: nowrap;
 }
 
 footer svg {

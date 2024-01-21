@@ -42,7 +42,7 @@ body {
     letter-spacing: 0.2rem;
 }
 
-#programsButton {
+#programsButton{
     padding-top: 2rem;
     margin-left: -3.5rem;
     transform: scale(0.9);
@@ -114,7 +114,7 @@ body {
         width: 80vw;
     }
 
-    #registerButton {
+    #programsButton {
         padding-right: 10rem;
         padding-top: 12rem;
     }

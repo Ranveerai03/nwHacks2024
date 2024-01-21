@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a review!</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link rel="stylesheet" href="../../public/css/review.css">
+</head>
+<body>
+    <h3>Write a review for <span id="course-placeholder"></span> in <span id="school-placeholder"></span></h3>
+
+    <textarea id="review" placeholder="Write review here!"></textarea>
+
+    <label for="anonymous">Post anonymous</label>
+    <input type="checkbox" id="anonymous" value="Anonymous">
+
+    <label for="difficulty">How difficult was the program? 1-5</label>
+    <input type="number" min="1" max="5" value="1" id="difficulty" step="1">
+
+    <label for="workload">How must was the workload 1-5</label>
+    <input type="number" min="1" max="5" value="1" id="workload" step="1">
+
+    <label for="overall">How fun is it</label>
+    <input type="number" min="1" max="5" value="1" id="overall" step="1">
+
+    <label for="grad">What year did you graduate</label>
+    <input type="number" max="2024" id="grad">
+
+    <input type="submit" id="submit" value="Submit">
+    <script src="../../public/js/firebaseAPI_scholarly"></script>
+    <script src="../../public/js/review.js"></script>
+</body>
+</html>

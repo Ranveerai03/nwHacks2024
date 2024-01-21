@@ -37,7 +37,11 @@ document.querySelector("#registration").addEventListener("click", (e) => {
 
     firebase.auth().createUserWithEmailAndPassword(email, password).then(userCredential => {
         const user = userCredential.user;
+        user.updateProfile({
+            displayName: document.getElementById("username").value
+        })
         localStorage.setItem("currentUid", user.uid);
+        localStorage.setItem("username", user.displayName);
         db.collection("users").doc(user.uid).set({        
             name: username,                    
             email: email,                       
@@ -63,6 +67,7 @@ document.querySelector("#login").addEventListener("click", (e) => {
             // Signed in
             var user = userCredential.user;
             localStorage.setItem("currentUid", user.uid);
+            localStorage.setItem("username", user.displayName);
             window.location.assign("main.html");
         })
         .catch((error) => {

@@ -36,7 +36,6 @@ section {
 #reviews {
     width: 90%;
 
-    display: flex;
     color: white;
 
     border-radius: 1.5rem;
@@ -70,4 +69,8 @@ input {
 #reviewButton {
     transform: scale(0.8);
     margin-right: 2rem;
+}
+
+.card {
+    margin-bottom: 1rem;
 }

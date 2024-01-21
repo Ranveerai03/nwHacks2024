@@ -1,4 +1,5 @@
 
+
 function renderCourses(coursesArray) {
     const template = document.querySelector("template")
     const cardsContainer = document.querySelector("#cards-container")

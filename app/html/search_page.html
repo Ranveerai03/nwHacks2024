@@ -17,30 +17,21 @@
         <span>About us</span>
         <span>Programs</span>
     </nav>
-    <div id="search-bar">
-        search
-    </div>
-
-    <div>Computer Science</div>
-    <div>Mathematics</div>
-    <div>Arts</div>
-    <div>Health Sciences</div>
-    <div>Business</div>
+    <input id="search" type="text" placeholder="Computer Science">
 
     <div id="cards-container"></div>
 
     <template>
         <div class="course-card">
-            <div class="course-name-container">
-                <h1 class="course-name"></h1> <!--Replace without element tag of your choice-->
-            </div>
             <img src="" alt="" class="course-img">
-            <h2 class="institution-name"></h2>
             <div class="rating-container">
-              <div class="difficulty-rating"></div>
-              <div class="workload-rating"></div>
-              <div class="program-rating"></div>
+                <div class="rating"></div>
             </div>
+            <div class="course-name-container">
+                <h1 class="institution-name"></h2>
+            </div>
+            <h2 class="course-name"></h1> <!--Replace without element tag of your choice-->
+            <p class="course-contents"></p>
         </div>
     </template>
     <script src="../../public/js/firebaseAPI_scholarly"></script>

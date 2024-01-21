@@ -41,7 +41,7 @@ document.querySelector("#registration").addEventListener("click", (e) => {
         db.collection("users").doc(user.uid).set({        
             name: username,                    
             email: email,                       
-            car: model,
+            education: model,
             city: thisCity                     
         }).then(function () {
             window.location.assign("main.html");       

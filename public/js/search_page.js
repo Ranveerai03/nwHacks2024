@@ -12,17 +12,19 @@ function renderCourses(searchValue) {
         querySnapshot.forEach(doc => {
             console.log(doc.data())
             if (doc.data().name.toLowerCase().includes(searchValue.toLowerCase())) {
-                renderCard(doc.data())
+                renderCard(doc.data(), doc.id)
             }
         })
     })
 }
 
-function renderCard(element) {
+function renderCard(element, elementDocId) {
     const template = document.querySelector("template")
     const cardsContainer = document.querySelector("#cards-container")
-
-    const card = template.content.cloneNode(true)
+    const clone = template.content.cloneNode(true)
+  
+    const card = clone.querySelector('div')
+    card.id = elementDocId
     console.log(card)
     const courseName = card.querySelector(".course-name")
     courseName.innerText = element.name
@@ -36,7 +38,22 @@ function renderCard(element) {
     const textContents = card.querySelector(".course-contents")
     textContents.innerText = element.description
 
+    const cardbutton = card.querySelector(".card-button")
+    const imgparent = card.querySelector("img").parentElement
+
+    cardbutton.addEventListener('click', e => addDocIdToSessionStr(elementDocId))
+    cardbutton.addEventListener('click', e => window.location.href="../../app/html/course_page.html")
+    imgparent.href = "../../app/html/course_page.html"
+    imgparent.addEventListener('click', addDocIdToSessionStr(elementDocId))
+    schoolName.parentElement.href = "../../app/html/course_page.html"
+    schoolName.parentElement.addEventListener('click', e => addDocIdToSessionStr(elementDocId))
+
+
     cardsContainer.appendChild(card)
+}
+
+function addDocIdToSessionStr(id) {
+    sessionStorage.setItem("course-id", id)
 }
 
 function calculateRating(element) {

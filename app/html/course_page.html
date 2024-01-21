@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scholarly</title>
-    <link rel="stylesheet" href="../../public/css/search_page.css">
+    <link rel="stylesheet" href="../../public/css/search_page.css" />
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav id="navbar">
-        <span>Scholarly</span>
-        <span>Home</span>
-        <span>About us</span>
-        <span>Programs</span>
+      <span>Scholarly</span>
+      <span>Home</span>
+      <span>About us</span>
+      <span>Programs</span>
     </nav>
     <section id="course-details">
-        <h1 id="course-name"></h1>
-        <h2 id="school-name"></h2>
-        <p id="certification-type"></p>
-        <p id="domestic-cost"></p>
-        <p id="international-cost"></p>
-        <p id="length"></p>
-        <p id="description"></p>
+      <div id="courseCardGroup"></div>
     </section>
+
+
     <section id="reviews">
-        <h2 id="reviews-heading">Reviews</h2>
-        <div id="reviews-container"></div>
+      <h2 id="reviews-heading">Reviews</h2>
+      <div class="card-container">
+        <div id="reviewCardGroup"></div>
+      </div>
     </section>
+
+
+    <template id="course-template">
+      <div class="courseCard">
+        <p class="degree">placeholder</p>
+        <p class="school">placeholder</p>
+        <p class="length">placeholder</p>
+        <p class="domesticTuition">placeholder</p>
+        <p class="internationalTuition">placeholder</p>
+        <p class="description">placeholder</p>
+      </div>
+    </template>
+
+    <template id="card-template">
+      <div class="card">
+        <p class="name">placeholder</p>
+        <p class="graduateYear">placeholder</p>
+        <p class="review">placeholder</p>
+        <p class="stars">placeholder</p>
+      </div>
+    </template>
 
     <script src="../../public/js/firebaseAPI_scholarly"></script>
     <script src="../../public/js/course_page.js"></script>
-</body>
-
+  </body>
 </html>

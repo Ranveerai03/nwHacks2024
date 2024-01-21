@@ -1,57 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scholarly</title>
-    <link rel="stylesheet" href="../../public/css/search_page.css" />
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  </head>
 
-  <body>
-    <nav id="navbar">
-      <span>Scholarly</span>
-      <span>Home</span>
-      <span>About us</span>
-      <span>Programs</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Scholarly</title>
+
+  <!-- CSS STYLESHEETS -->
+  <link rel="stylesheet" type="text/css" href="../../public/css/button.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/sticky.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/search_page.css" />
+  <link rel="stylesheet" type="text/css" href="../../public/css/course.css">
+
+  <!-- FIREBASE LINKS -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+
+</head>
+
+<body>
+
+  <!-- STICKY NAVBAR BEGINS -->
+  <div class="followerPage" id="followerPage">
+
+    <nav class="primary-navigation">
+
+      <div id="leftNav">
+        <a href="../html/main.html">scholarly</a>
+      </div>
+
+      <div id="rightNav">
+        <a id="login" href="../html/login.html">login</a>
+        <a id="about" href="#">about us</a>
+        <a id="programs" href="../html/search_page.html">programs</a>
+
+
+        <svg class="boxMenu" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64"
+          preserveAspectRatio="none">
+          <!-- Top-left square -->
+          <rect id="topLeftBox" x="3" y="3" width="24" height="24" rx="6" ry="6" stroke="#DDD" stroke-width="4"
+            fill="none" />
+
+          <!-- Top-right square -->
+          <rect id="topLeftBox" x="37" y="3" width="24" height="24" rx="6" ry="6" stroke="#DDD" stroke-width="4"
+            fill="none" />
+
+          <!-- Bottom-left square -->
+          <rect x="3" y="37" width="24" height="24" rx="6" ry="6" stroke="#DDD" stroke-width="4" fill="none" />
+
+          <!-- Bottom-right square -->
+          <rect x="37" y="37" width="24" height="24" rx="6" ry="6" stroke="#DDD" stroke-width="4" fill="none" />
+        </svg>
+      </div>
+
     </nav>
-    <section id="course-details">
-      <div id="courseCardGroup"></div>
-    </section>
+  </div>
+  <!-- STICKY NAVBAR ENDS -->
 
 
-    <section id="reviews">
-      <h2 id="reviews-heading">Reviews</h2>
-      <div class="card-container">
-        <div id="reviewCardGroup"></div>
-      </div>
-    </section>
+  <!--  -->
+  <section id="course-details">
+    <div id="courseCardGroup"></div>
+  </section>
 
 
-    <template id="course-template">
-      <div class="courseCard">
-        <p class="degree">placeholder</p>
-        <p class="school">placeholder</p>
-        <p class="length">placeholder</p>
-        <p class="domesticTuition">placeholder</p>
-        <p class="internationalTuition">placeholder</p>
-        <p class="description">placeholder</p>
-      </div>
-    </template>
+  <!--  -->
+  <section id="reviews">
+    <h2 id="reviews-heading">Reviews</h2>
+    <div class="card-container">
+      <div id="reviewCardGroup"></div>
+    </div>
+  </section>
 
-    <template id="card-template">
-      <div class="card">
-        <p class="name">placeholder</p>
-        <p class="graduateYear">placeholder</p>
-        <p class="review">placeholder</p>
-        <p class="stars">placeholder</p>
-      </div>
-    </template>
 
-    <script src="../../public/js/firebaseAPI_scholarly"></script>
-    <script src="../../public/js/course_page.js"></script>
-  </body>
+  <!--  -->
+  <template id="course-template">
+    <div class="courseCard">
+      <p class="degree">placeholder</p>
+      <p class="school">placeholder</p>
+      <p class="length">placeholder</p>
+      <p class="domesticTuition">placeholder</p>
+      <p class="internationalTuition">placeholder</p>
+      <p class="description">placeholder</p>
+    </div>
+  </template>
+
+
+  <!--  -->
+  <template id="card-template">
+    <div class="card">
+      <p class="name">placeholder</p>
+      <p class="graduateYear">placeholder</p>
+      <p class="review">placeholder</p>
+      <p class="stars">placeholder</p>
+    </div>
+  </template>
+
+
+  <!-- JAVASCRIPT LINKS -->
+  <script src="../../public/js/firebaseAPI_scholarly"></script>
+  <script src="../../public/js/course_page.js"></script>
+</body>
+
 </html>

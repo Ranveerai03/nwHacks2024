@@ -1,6 +1,6 @@
 :root {
     --clr-trans-black: hsla(0, 0, 0, 0.3);
-    --clr-trans-grey: hsla(0, 0%, 100%, 0.7);
+    --clr-trans-grey: hsla(0, 0%, 100%, 0.6);
 }
 
 body {
@@ -9,6 +9,8 @@ body {
     box-sizing: border-box;
 
     background-color: #1B1B1B;
+    color: white;
+    font-family: "Montserrat Alternates", sans-serif;
 }
 
 a {
@@ -31,7 +33,7 @@ a {
     border-top: none;
     border-bottom: 2px solid var(--clr-trans-grey);
 
-    padding-top: 7.5%;
+    padding-top: 6%;
     margin-left: 7.5%;
     margin-right: 40%;
 }
@@ -111,20 +113,27 @@ button {
     display: flex;
     color: white;
 
-    border-radius: 2.5rem;
+    border-radius: 1.5rem;
     border: 1px solid rgba(81, 81, 81, 0.85);
 
-    background: rgba(0, 0, 0, 0.60);
+    background: rgba(10, 10, 10, 0.6);
 
     backdrop-filter: blur(5px);
 }
 
-.card-content {
-    padding: 0;
+.logo-rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 3rem;
 }
 
 .course-img {
-    width: 180px;
+    width: 140px;
+    height: 140px;
+    padding-bottom: 0.5rem;
 }
 
 .course-info {
@@ -157,4 +166,9 @@ button {
 
 .course-contents {
     font-size: 14pt;
+}
+
+#circularButton {
+    margin-left: 8rem;
+    transform: scale(0.6); 
 }

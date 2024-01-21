@@ -1,0 +1,14 @@
+:root {
+    --clr-trans-black: hsla(0, 0, 0, 0.3);
+    --clr-trans-grey: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1B1B1B;
+}

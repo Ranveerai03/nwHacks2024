@@ -59,10 +59,24 @@
     </div>
     <!-- STICKY NAVBAR ENDS -->
 
+    <!-- SEARCH BAR BEGINS -->
     <div id="searchArea">
+        <label for="searchInput">
+            <svg class="magnify" xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43"
+                fill="none">
+                <path
+                    d="M18.5568 3C15.48 3 12.4722 3.91239 9.91392 5.6218C7.35561 7.3312 5.36166 9.76084 4.1842 12.6035C3.00674 15.4461 2.69866 18.5741 3.29893 21.5918C3.89919 24.6095 5.38083 27.3815 7.55649 29.5571C9.73215 31.7328 12.5041 33.2144 15.5218 33.8147C18.5396 34.415 21.6675 34.1069 24.5102 32.9294C27.3528 31.752 29.7824 29.758 31.4918 27.1997C33.2012 24.6414 34.1136 21.6337 34.1136 18.5568C34.1134 14.431 32.4743 10.4742 29.5569 7.55678C26.6394 4.63936 22.6827 3.00026 18.5568 3Z"
+                    stroke="#6F6F6F" stroke-opacity="0.87" stroke-width="5" stroke-miterlimit="10" />
+                <path d="M34.1138 34.1136L40.0001 40" stroke="#6F6F6F" stroke-opacity="0.87" stroke-width="5"
+                    stroke-miterlimit="10" stroke-linecap="round" />
+            </svg>
+        </label>
         <input id="search" type="text" placeholder="search for a program">
     </div>
+    <!-- SEARCH BAR ENDS -->
 
+
+    <!-- CARDS SECTION BEGINS -->
     <div id="cards-container"></div>
 
     <template>
@@ -83,6 +97,30 @@
             <button class="card-button">Placeholder</button>
         </div>
     </template>
+    <!-- CARDS SECTION ENDS -->
+
+
+
+    <!-- BACKGROUND STATIC GRAPHIC BEGINS -->
+    <div id="gradGraphic">
+        <svg width="1597" height="278" viewBox="0 0 1597 278" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5">
+                <path d="M938.531 139.959L1596.14 139.959" stroke="#C8C8C8" stroke-linecap="round" />
+                <path d="M1 139.959H660.531" stroke="#C8C8C8" stroke-linecap="round" />
+                <path d="M713.255 115.034L800.49 65.1862L887.724 115.034L800.49 164.883L713.255 115.034Z"
+                    stroke="#D8D8D8" stroke-opacity="0.6" stroke-width="5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path
+                    d="M744.41 133.728V183.576L800.49 214.731M800.49 214.731L856.569 183.576V133.728M800.49 214.731V164.883M887.724 183.576V115.034"
+                    stroke="#D8D8D8" stroke-opacity="0.6" stroke-width="5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <circle cx="799.531" cy="139" r="138.5" stroke="#C8C8C8" />
+            </g>
+        </svg>
+    </div>
+    <!-- BACKGROUND STATIC GRAPHIC BEGINS -->
+
+    <!-- JAVASCRIPT LINKS -->
     <script src="../../public/js/firebaseAPI_scholarly"></script>
     <script src="../../public/js/search_page.js"></script>
 </body>

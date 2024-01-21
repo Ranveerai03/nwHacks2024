@@ -1,28 +1,69 @@
-input::placeholder {
-    color: white;
-    font-size: 18pt;
-    padding-bottom: 1rem;
-    font-family: "Montserrat Alternates", sans-serif;
-
+:root {
+    --clr-trans-black: hsla(0, 0, 0, 0.3);
+    --clr-trans-grey: hsla(0, 0%, 100%, 0.7);
 }
 
-* {
-    border: none;
-    
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: #1B1B1B;
 }
 
 #followerPage {
     z-index: -1;
 }
 
-/* #navbar {
+#searchArea {
+    z-index: 100;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
 
-    width: 100vw;
-    height: 5vh;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid var(--clr-trans-grey);
 
-    background-color: transparent;
-} */
+    padding-top: 7.5%;
+    margin-left: 7.5%;
+    margin-right: 40%;
+}
+
+input::placeholder {
+    color: var(--clr-trans-grey);
+    font-size: 18pt;
+    padding-bottom: 1rem;
+    font-family: "Montserrat Alternates", sans-serif;
+
+}
+
+input {
+    background: none;
+
+    height: 120%;
+    width: 100%;
+    border: none;
+
+    padding: 1.25rem;
+    padding-left: 2.5rem;
+}
+
+input {
+    font-size: 18pt;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: white;
+
+}
+
+#search:hover,
+#search:focus {
+    border: none;
+    outline: none;
+
+}
 
 #search-bar {
     display: flex;
@@ -34,30 +75,23 @@ input::placeholder {
     width: 100%;
 }
 
-#searchArea {
-    z-index: 100;
-
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: 2px solid red;
-
-    padding-top: 7.5%;
-    margin-left: 7.5%;
-    margin-right: 40%;
+.magnify {
+    position: relative;
+    margin-left: 3rem;
+    transform: scale(0.9);
 }
 
-input {
-    background: none;
+#gradGraphic {
+    z-index: -1;
+    position: fixed;
 
-    height: 120%;
-    width: 100%;
-    border: none;
+    display: flex;
 
-    padding: 1.25rem;
-    padding-left: 6rem;
+    top: 35%;
+
+    right: 0;
+    left: 0;
+
+    opacity: 0.75;
+    transform: scale(0.75);
 }
-
-#search:hover, #search:focus {
-    border: 1.5px solid yellow !important;
-  }

@@ -1,5 +1,5 @@
 console.log("HELLLLOOOO");
-const courseRef = db.collection("courses").doc("5qhsFP65dhKBaa01O42s");
+const courseRef = db.collection("courses").doc(fetchCourseIdFromSessionStr());
 const reviewsRef = courseRef.collection("reviews");
 const reviewCardTemplate = document.getElementById("card-template");
 const courseReviewCardTemplate = document.getElementById("course-template");
@@ -32,9 +32,9 @@ courseRef.get().then((doc) => {
 
 reviewsRef.get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
-    const name = doc.data().name;
+    const name = doc.data().user;
     const review = doc.data().review;
-    const graduateYear = doc.data().graduateYear;
+    const graduateYear = doc.data().gradYear;
     const stars = doc.data().stars;
 
     console.log(name);
@@ -45,10 +45,14 @@ reviewsRef.get().then((querySnapshot) => {
     let reviewCard = reviewCardTemplate.content.cloneNode(true);
     reviewCard.querySelector(".name").innerHTML = `Name: <b>${name}</b>`;
     reviewCard.querySelector(".graduateYear").innerHTML =
-      "TEST: <b>${graduateYear}</b>";
+      `Graduated: <b>${graduateYear}</b>`;
     reviewCard.querySelector(".review").innerHTML = `Review: ${review}`;
     reviewCard.querySelector(".stars").innerHTML = `Stars: ${stars}`;
 
     reviewCardGroup.appendChild(reviewCard);
   });
 });
+
+function fetchCourseIdFromSessionStr() {
+    return sessionStorage.getItem("course-id")
+}

@@ -14,7 +14,8 @@ courseRef.get().then((doc) => {
   const description = doc.data().description;
   const rating = calculateRating(doc.data())
   const img = document.querySelector("#school-logo")
-  document.querySelector("#coursepage-rating").textContent = rating
+  document.querySelector("#coursepage-rating").innerHTML = insertStars(rating)
+  // document.querySelector("#coursepage-rating").innerHTML = rating
 
   if (doc.data().school === "British Columbia Institute of Technology") {
     img.src = "../../public/media/bcitLogo.png"
@@ -63,7 +64,8 @@ reviewsRef.get().then((querySnapshot) => {
     reviewCard.querySelector(".name").innerHTML = name;
     reviewCard.querySelector(".graduateYear").innerHTML = graduateYear;
     reviewCard.querySelector(".review").innerHTML = review;
-    reviewCard.querySelector(".stars").innerHTML = stars;
+    //reviewCard.querySelector(".stars").textContent = stars;
+    reviewCard.querySelector(".stars").innerHTML = 'Rating: '+ insertStars(stars);
 
     reviewCardGroup.appendChild(reviewCard);
   });
@@ -80,4 +82,15 @@ function calculateRating(element) {
   } else {
     return element.totalRating / element.numreviews
   }
+}
+
+function insertStars(rating) {
+  let starRating = "";
+  // This loop runs from i=0 to i<rating, where 'rating' is a variable holding the rating value.
+  for (let i = 0; i < rating; i++) {
+    starRating += '<span class="material-icons">star</span>';
+  }
+
+  return starRating
+  // After the first loop, this second loop runs from i=rating to i<5.
 }

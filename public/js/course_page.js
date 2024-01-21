@@ -11,6 +11,21 @@ courseRef.get().then((doc) => {
   const internationalTuition = doc.data().internationalTuition;
   const length = doc.data().length;
   const description = doc.data().description;
+  const rating = calculateRating(doc.data())
+  const img = document.querySelector("#school-logo")
+  document.querySelector("#coursepage-rating").textContent = rating
+
+  if (doc.data().school === "British Columbia Institute of Technology") {
+    img.src = "../../public/media/bcitLogo.png"
+  } else if (doc.data().school === "University of British Columbia") {
+    img.src = "../../public/media/ubcLogo.png"
+  } else if (doc.data().school === "Simon Fraser University") {
+    img.src = "../../public/media/sfuLogo.png"
+  } else if (doc.data().school === "Langara College") {
+    img.src = "../../public/media/langaraLogo.png"
+  } else if (doc.data().school === "Kwantlen Polytechnic University") {
+    img.src = "../../public/media/kpuLogo.png"
+  }
 
   console.log(degree);
   console.log(school);
@@ -55,4 +70,13 @@ reviewsRef.get().then((querySnapshot) => {
 
 function fetchCourseIdFromSessionStr() {
     return sessionStorage.getItem("course-id")
+}
+
+function calculateRating(element) {
+  console.log(element)
+  if (element.numreviews === 0 || typeof (element.numreviews) != 'number') {
+    return "No Reviews"
+  } else {
+    return element.totalRating / element.numreviews
+  }
 }

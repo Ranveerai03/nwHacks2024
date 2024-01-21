@@ -43,11 +43,10 @@ reviewsRef.get().then((querySnapshot) => {
     console.log(stars);
 
     let reviewCard = reviewCardTemplate.content.cloneNode(true);
-    reviewCard.querySelector(".name").innerHTML = `Name: <b>${name}</b>`;
-    reviewCard.querySelector(".graduateYear").innerHTML =
-      `Graduated: <b>${graduateYear}</b>`;
-    reviewCard.querySelector(".review").innerHTML = `Review: ${review}`;
-    reviewCard.querySelector(".stars").innerHTML = `Stars: ${stars}`;
+    reviewCard.querySelector(".name").innerHTML = name;
+    reviewCard.querySelector(".graduateYear").innerHTML = graduateYear;
+    reviewCard.querySelector(".review").innerHTML = review;
+    reviewCard.querySelector(".stars").innerHTML = stars;
 
     reviewCardGroup.appendChild(reviewCard);
   });

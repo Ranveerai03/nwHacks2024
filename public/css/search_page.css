@@ -33,7 +33,7 @@ a {
     border-top: none;
     border-bottom: 2px solid var(--clr-trans-grey);
 
-    padding-top: 6%;
+    /* padding-top: 6%; */
     margin-left: 7.5%;
     margin-right: 40%;
 }

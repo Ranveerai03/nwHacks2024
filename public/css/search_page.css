@@ -11,6 +11,10 @@ body {
     background-color: #1B1B1B;
 }
 
+a {
+    text-decoration: none;
+}
+
 #followerPage {
     z-index: -1;
 }
@@ -113,4 +117,44 @@ button {
     background: rgba(0, 0, 0, 0.60);
 
     backdrop-filter: blur(5px);
+}
+
+.card-content {
+    padding: 0;
+}
+
+.course-img {
+    width: 180px;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 1.5rem;
+    width: 55rem;
+}
+
+.course-name {
+    padding-bottom: 0.5rem;
+
+    font-size: 24pt;
+    font-weight: 500;
+}
+
+.course-name-container {
+    
+}
+
+.institution-name {
+    padding-bottom: 0.5rem;
+
+    color: white;
+
+    font-size: 18pt;
+    font-weight: 500;
+}
+
+.course-contents {
+    font-size: 14pt;
 }

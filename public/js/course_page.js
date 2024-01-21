@@ -65,7 +65,7 @@ reviewsRef.get().then((querySnapshot) => {
     reviewCard.querySelector(".graduateYear").innerHTML = graduateYear;
     reviewCard.querySelector(".review").innerHTML = review;
     //reviewCard.querySelector(".stars").textContent = stars;
-    reviewCard.querySelector(".stars").innerHTML = 'Rating: '+ insertStars(stars);
+    reviewCard.querySelector(".stars").innerHTML = insertStars(stars);
 
     reviewCardGroup.appendChild(reviewCard);
   });

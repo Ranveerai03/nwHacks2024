@@ -55,6 +55,9 @@
     --clr-registration-glass: #ffffff1a;
     --clr-registration-border: #ffffff30;
 
+    --clr-tan: hsla(27, 98%, 65%, 0.3);
+    --clr-brown: hsla(26, 100%, 28%, 0.3);
+
 }
 
 
@@ -108,14 +111,14 @@ body {
     position: relative;
     margin: 6% auto;
 
-    background: var(--clr-registration-glass);
-    backdrop-filter: blur(20px);
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(15px);
 
     padding: 6em;
 
     border-radius: 25px;
 
-    border: 2px solid var(--clr-registration-border);
+    border: 1px solid rgba(139, 139, 139, 0.85);
     box-shadow: 0 0 30px #0000002a;
 
     overflow: hidden;
@@ -138,7 +141,7 @@ body {
 
     min-width: 200px;
 
-    box-shadow: 0 0 20px 9px #24baff1f;
+    box-shadow: 0 0 20px 9px #ff8e241f;
     border-radius: 30px;
 
     margin-bottom: 20px;
@@ -193,7 +196,7 @@ body {
     width: 50%;
     height: 100%;
 
-    background: linear-gradient(to right, var(--clr-neon-pink), var(--clr-vibrantlav));
+    background: linear-gradient(to right, var(--clr-tan), var(--clr-brown));
     border-radius: 30px;
 
     transition: 500ms;
@@ -290,7 +293,7 @@ option {
     display: block;
     margin: auto;
 
-    background: linear-gradient(to right, var(--clr-neon-pink), var(--clr-vibrantlav));
+    background: linear-gradient(to right, var(--clr-tan), var(--clr-brown));
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -364,4 +367,16 @@ span {
         padding: 2px;
         margin: -20px;
     }
+}
+
+#registerImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    opacity: 0.7;
 }

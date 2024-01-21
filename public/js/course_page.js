@@ -6,6 +6,7 @@ const courseReviewCardTemplate = document.getElementById("course-template");
 
 courseRef.get().then((doc) => {
   const degree = doc.data().degree;
+  const specialisation = doc.data().name
   const school = doc.data().school;
   const domesticTuition = doc.data().domesticTuition;
   const internationalTuition = doc.data().internationalTuition;
@@ -36,6 +37,7 @@ courseRef.get().then((doc) => {
 
   let courseReviewCard = courseReviewCardTemplate.content.cloneNode(true);
   courseReviewCard.querySelector(".degree").innerHTML = degree;
+  courseReviewCard.querySelector(".specialisation").innerHTML = specialisation;
   courseReviewCard.querySelector(".school").innerHTML = school;
   courseReviewCard.querySelector(".length").innerHTML = `Length: <b>${length}</b>`;
   courseReviewCard.querySelector(".domesticTuition").innerHTML = `Domestic tuition: <b>${domesticTuition}</b>`;

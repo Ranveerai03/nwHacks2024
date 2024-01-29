@@ -108,10 +108,14 @@ button {
     border: none;
 }
 
+/* #cards-container {
+    width: 0%;
+} */
 
 .course-card {
     display: flex;
     color: white;
+    
 
     /* border-radius: 1.5rem; */
     border: 1px solid rgba(81, 81, 81, 0.85);
@@ -170,5 +174,5 @@ button {
 
 #circularButton {
     margin-left: 8rem;
-    transform: scale(0.6); 
+    transform: scale(0.5); 
 }

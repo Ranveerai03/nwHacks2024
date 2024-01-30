@@ -48,7 +48,7 @@ document.querySelector("#registration").addEventListener("click", (e) => {
             education: model,
             city: thisCity                     
         }).then(function () {
-            window.location.assign("main.html");       
+            window.location.assign("index.html");       
         }).catch(function (error) {
             alert("Error adding new user: " + error);
         });
@@ -68,7 +68,7 @@ document.querySelector("#login").addEventListener("click", (e) => {
             var user = userCredential.user;
             localStorage.setItem("currentUid", user.uid);
             localStorage.setItem("username", user.displayName);
-            window.location.assign("main.html");
+            window.location.assign("index.html");
         })
         .catch((error) => {
             var errorCode = error.code;

@@ -27,7 +27,7 @@ var uiConfig = {
             city: user.city, //optional default profile info,L
           })
           .then(function () {
-            window.location.assign("main.html"); //re-direct to main.html after signup
+            window.location.assign("index.html"); //re-direct to index.html after signup
           })
           .catch(function (error) {
           });
@@ -39,7 +39,7 @@ var uiConfig = {
   },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: "popup",
-  signInSuccessUrl: "main.html",
+  signInSuccessUrl: "index.html",
   signInOptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID],
   // Terms of service url.
   tosUrl: "<your-tos-url>",

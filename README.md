@@ -28,4 +28,4 @@ There were a lot of features we would have liked to implement but did not have t
 - Added accessibility (Languages, Light/Dark Mode, Screen Readers, etc.)
 
 ## Link
-- https://github.com/Ranveerai03/nwHacks2024
+- https://scholarly-6ee3e.web.app/
